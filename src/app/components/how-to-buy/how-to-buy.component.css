@@ -1,0 +1,65 @@
+.how-to-buy {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f5f5;
+}
+
+.how-to-buy h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.option {
+  background: #e0f2f1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option .icon img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.option h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.option p {
+  font-size: 16px;
+  color: #555;
+}
+
+.option a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.contact {
+  background-color: red;
+}
+
+.shop {
+  background-color: red;
+}

@@ -1,0 +1,69 @@
+<header class="top-header">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="top-links">
+      <a href="#">Sign In</a>
+      <a href="#">Create an Account</a>
+      <a href="#">OGA Login</a> <!-- ✅ OGA Login Added -->
+    </div>
+    <div class="contact-info">
+      <span>+44 (0)20 7608 2008</span>
+    </div>
+  </div>
+</header>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="../../../assets/images/logo.png" alt="One4All Rewards" />
+    </a>
+
+    <!-- ✅ Hamburger Menu Fix -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+
+        <!-- ✅ Corporate Rewards Dropdown (Fixed) -->
+        <li class="nav-item dropdown" [class.show]="isDropdownOpen">
+          <a class="nav-link dropdown-toggle" href="#" id="corporateDropdown" role="button" 
+             (click)="toggleDropdown($event)" [attr.aria-expanded]="isDropdownOpen">
+            Corporate Rewards
+          </a>
+          <ul class="dropdown-menu" [class.show]="isDropdownOpen">
+            <li><a class="dropdown-item" href="#">Employee Rewards</a></li>
+            <li><a class="dropdown-item" href="#">Customer Rewards</a></li>
+          </ul>
+        </li>
+        
+        
+        
+
+        <!-- ✅ Why One4All? (No Dropdown) -->
+        <li class="nav-item">
+          <a class="nav-link" href="#">Why One4All?</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQs</a>
+        </li>
+      </ul>
+
+      <div class="nav-buttons">
+        <a href="#" class="btn btn-danger">Buy Physical Gift Cards</a>
+        <a href="#" class="btn btn-danger">Buy Digital Gift Cards</a>
+      </div>
+
+      <a href="#" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+</nav>

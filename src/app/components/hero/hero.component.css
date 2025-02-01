@@ -1,0 +1,24 @@
+.hero-section {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}

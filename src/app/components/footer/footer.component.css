@@ -1,0 +1,116 @@
+.footer {
+  background-color: #000; /* Black background */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: white; /* White text */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ADD8E6; /* Pale blue */
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ADD8E6; /* Pale blue on hover */
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: #ADD8E6; /* Pale blue icons */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: white; /* White on hover */
+}
+
+.download-btn {
+  background-color: #ADD8E6; /* Pale blue button */
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.footer-bottom a {
+  color: #ADD8E6;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-sections {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

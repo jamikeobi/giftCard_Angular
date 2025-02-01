@@ -1,0 +1,10 @@
+<div class="digital-options">
+  <div class="card-container">
+    <div class="card" *ngFor="let option of options">
+      <div class="image-container">
+        <img [src]="option.image" alt="Option Image" />
+        <button class="card-button">{{ option.buttonText }}</button>
+      </div>
+    </div>
+  </div>
+</div>

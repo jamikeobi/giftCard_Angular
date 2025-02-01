@@ -1,0 +1,134 @@
+/* ✅ Top Header Styling */
+.top-header {
+  background: #f8f9fa;
+  padding: 5px 0;
+  font-size: 14px;
+
+  .top-links a {
+    color: #777;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .contact-info {
+    color: #333;
+  }
+}
+
+/* ✅ Navbar Styling */
+.navbar {
+  background: white;
+  padding: 15px 0;
+
+  .navbar-brand img {
+    max-width: 150px;
+  }
+
+  .nav-link {
+    color: #333;
+    font-weight: 500;
+    margin-right: 15px;
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn-danger {
+    background: #e60000;
+    border: none;
+    padding: 8px 15px;
+    font-weight: 500;
+  }
+
+  .cart-icon {
+    font-size: 20px;
+    color: #333;
+    margin-left: 15px;
+  }
+}
+
+/* ✅ Mobile View Fix */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: white;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .cart-icon {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* ✅ Fix dropdown visibility */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ✅ Corporate Rewards dropdown on hover (Desktop) */
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-menu {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+
+/* ✅ Fix dropdown toggle on mobile */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+    position: static; /* Ensure it appears within flow */
+    width: 100%; /* Make it fit in mobile */
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+

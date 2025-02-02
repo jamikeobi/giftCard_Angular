@@ -1,0 +1,370 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Ensures text content and video are responsive */
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content h1 {
+  font-size: 3rem; /* Adjusts for different screen sizes */
+}
+
+.content h3 {
+  font-size: 1.2rem;
+}
+
+/* Button Styling */
+button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 50%; /* Takes 50% of the width on larger screens */
+  max-width: 600px;
+  padding-bottom: 28.125%; /* Maintains aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .video-container {
+    width: 100%;
+    padding-bottom: 56.25%; /* Adjusts for full width on small screens */
+  }
+}
+
+
+.hero-section {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+
+.favourites-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.favourites-card {
+  text-align: center;
+  max-width: 900px; 
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favourites-card h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.favourites-card p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.favourites-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.image-row a {
+  flex: 1;
+  max-width: 150px;
+}
+
+.image-row img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #f78f1e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #d37000;
+}
+
+.bottom-image {
+  margin-top: 20px;
+}
+
+.bottom-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .favourites-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .image-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-row a {
+    max-width: 120px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.testimonial-card {
+  max-width: 900px;
+  width: 90%;
+  background-color: orange; /* Changed background color to orange */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: white; /* Changed text color to white for better contrast */
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+  }
+}
+
+
+.rewards-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.rewards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.reward-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 320px; /* Ensures a good width */
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reward-box img {
+  width: 100%; /* Image now fits inside the card */
+  max-width: 250px; /* Adjust image size */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.reward-box h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.reward-box p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 90%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .rewards-container {
+    flex-direction: column; /* Stack items */
+    align-items: center;
+  }
+
+  .reward-box {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .reward-box img {
+    max-width: 200px; /* Smaller images for mobile */
+  }
+
+  .reward-box h3 {
+    font-size: 20px;
+  }
+
+  .reward-box p {
+    font-size: 13px;
+  }
+}
+
+
+.digital-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  width: 300px; /* Adjust width to maintain consistency */
+  height: 180px; /* Keep a reasonable height */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+/* Adjusting width only for specific buttons */
+.card:nth-child(2) .card-button, /* Find Out More */
+.card:nth-child(4) .card-button  /* Where to Spend */ {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+

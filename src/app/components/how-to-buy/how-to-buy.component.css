@@ -55,7 +55,10 @@
   cursor: pointer;
   color: white;
 }
-
+button a{
+  text-decoration: none;
+  color: whitesmoke !important;
+}
 .contact {
   background-color: red;
 }

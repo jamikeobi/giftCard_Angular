@@ -1,0 +1,13 @@
+/* Optional styling for large image card */
+.card-img-top {
+    object-fit: cover;
+    height: 250px; /* Adjust to your preferred height */
+  }
+  
+  /* Optional styling for the smaller cards */
+  .card-body h6 {
+    font-size: 1rem;
+    text-align: center;
+    height: 20px;
+  }
+  

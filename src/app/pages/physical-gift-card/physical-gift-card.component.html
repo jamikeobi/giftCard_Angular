@@ -1,0 +1,223 @@
+<div class="container mt-5 mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Image Slider -->
+    <div class="col-md-6">
+      <div id="giftCardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let img of images; let i = index"
+            [class.active]="i === 0"
+          >
+            <img
+              [src]="img"
+              class="d-block w-100 giftcard-img"
+              alt="Gift Card"
+            />
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            *ngFor="let img of images; let i = index"
+            type="button"
+            [attr.data-bs-target]="'#giftCardCarousel'"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Gift Card Form -->
+    <div class="col-md-6">
+      <div class="giftcard-form">
+        <h3 class="text-center" style="font-weight: lighter">
+          Buy a One4all Gift Card
+        </h3>
+        <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
+          <!-- Amount & Quantity Row -->
+          <div class="row g-3">
+            <div class="col-6">
+              <label class="form-label">Card Amount (€10 - €120)</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="amount"
+                min="10"
+                max="120"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('amount')?.invalid &&
+                  giftCardForm.get('amount')?.touched
+                "
+                class="text-danger"
+              >
+                Amount must be between €10 and €120.
+              </div>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Quantity</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="quantity"
+                min="1"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('quantity')?.invalid &&
+                  giftCardForm.get('quantity')?.touched
+                "
+                class="text-danger"
+              >
+                Please enter a valid quantity.
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex gap-2 mt-3">
+            <button
+              type="submit"
+              class="btn btn-primary w-50"
+              [disabled]="giftCardForm.invalid"
+            >
+              Add to Cart
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-50"
+              data-bs-toggle="modal"
+              data-bs-target="#messageModal"
+            >
+              Add Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Message -->
+  <div class="container">
+    <div
+      class="modal fade"
+      id="messageModal"
+      tabindex="-1"
+      aria-labelledby="messageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="messageModalLabel">Add a Message</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="giftCardForm" (ngSubmit)="saveMessage()">
+              <div class="mb-3">
+                <label class="form-label">To</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="to"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('to')?.invalid &&
+                    giftCardForm.get('to')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Recipient name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">From</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="from"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('from')?.invalid &&
+                    giftCardForm.get('from')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Sender name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  rows="3"
+                  required
+                ></textarea>
+                <div
+                  *ngIf="
+                    giftCardForm.get('message')?.invalid &&
+                    giftCardForm.get('message')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Please enter a message.
+                </div>
+              </div>
+              <!-- <button type="submit" class="btn btn-success w-100" [disabled]="giftCardForm.get('to')?.invalid || giftCardForm.get('from')?.invalid || giftCardForm.get('message')?.invalid">
+              Save Message
+            </button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hidden Close Button to Close Modal -->
+  <div class="container">
+    <button
+      id="closeModalBtn"
+      type="button"
+      class="d-none"
+      data-bs-dismiss="modal"
+    ></button>
+  </div>
+</div>
+
+<div class="container">
+  <p>
+    The One4all Gift Card is issued by GVS Prepaid Limited and is authorised by
+    the Financial Conduct Authority under the Electronic Money Regulations 2011
+    (register reference 900230) for the issuing of electronic money. Please
+    note: Orders over £12,000 will require KYC which can delay the processing of
+    your order
+  </p>
+</div>
+
+<app-giftcard-collection></app-giftcard-collection>
+
+<app-fav-slider></app-fav-slider>
+
+<app-have-bigger-budget></app-have-bigger-budget>
+
+<app-corporate-gift-card></app-corporate-gift-card>
+
+<div class="container how-to-buy">
+    <h2>Reasons to choose One4all corporate gift cards</h2>
+    <app-rewards></app-rewards>
+</div>
+
+<app-digital-options></app-digital-options>

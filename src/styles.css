@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(239, 237, 237);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Optional styling for large image card */
+.card-img-top {
+    object-fit: cover;
+    height: 250px; /* Adjust to your preferred height */
+  }
+  
+  /* Optional styling for the smaller cards */
+  .card-body h6 {
+    font-size: 1rem;
+    text-align: center;
+    height: 20px;
+  }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+  h2, h3, h4, h5{
+    font-weight: lighter !important;
+  }

@@ -1,0 +1,30 @@
+<div class="container mt-5" *ngIf="shouldShow">
+  <!-- Large Image Card -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card" style="width: 100%;">
+        <img src="../../../assets/images/blog/main/consulting_main-section.jpg" class="card-img-top" alt="Large Image" style="height: 600px !important;">
+        <div class="card-body">
+          <p class="card-text">The Powerful Role Gratitude Plays in the Workplace</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5">
+ 
+  
+    <!-- Smaller Image Cards (9 Cards) -->
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let card of filteredPosts | slice:0:9">
+        <div class="card">
+          <img [src]="card.image" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h6 class="card-title">{{card.title}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

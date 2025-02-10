@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Favourite Collection</h2>
+
+  <div class="slider-container">
+    <!-- Previous Button -->
+    <button class="slider-btn prev-btn" (click)="prevSlide()">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+    <!-- Image Slider -->
+    <div class="slider-wrapper">
+      <div #slider class="slider">
+        <img *ngFor="let img of images" [src]="img" class="slider-item" alt="Favourite Image">
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button class="slider-btn next-btn" (click)="nextSlide()">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

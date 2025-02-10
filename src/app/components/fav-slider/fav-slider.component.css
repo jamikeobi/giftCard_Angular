@@ -1,0 +1,92 @@
+/* 🔹 Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgb(239, 237, 237);
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Slider Wrapper */
+.slider-wrapper {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔹 Slider Track */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 15px;
+}
+
+/* 🔹 Images */
+.slider-item {
+  width: calc(100% / 5 - 10px); /* Show 5 images */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Hover Effect */
+.slider-item:hover {
+  transform: scale(1.05);
+}
+
+/* 🔹 Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  z-index: 1000; /* Fixed buttons being covered */
+}
+
+/* 🔹 Button Hover Effect */
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* 🔹 Button Positions */
+.prev-btn {
+  left: 40px;
+}
+
+.next-btn {
+  right: 40px;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .slider-item {
+      width: calc(100% / 3 - 10px); /* Show 3 images on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-item {
+      width: calc(100% / 2 - 10px); /* Show 2 images on very small screens */
+  }
+
+  .slider-btn {
+      padding: 8px 16px;
+      font-size: 18px;
+  }
+}

@@ -1,9 +1,9 @@
 <header class="top-header">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="top-links">
-      <a href="#">Sign In</a>
-      <a href="#">Create an Account</a>
-      <a href="#">OGA Login</a> <!-- ✅ OGA Login Added -->
+      <a routerLink="/customer/account/login">Sign In</a>
+      <a routerLink="/customer/account/create">Create an Account</a>
+      <a routerLink="/store/login2">OGA Login</a> <!-- ✅ OGA Login Added -->
     </div>
     <div class="contact-info">
       <span>+44 (0)20 7608 2008</span>
@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" routerLink="/blog">Blog</a>
         </li>
 
         <!-- ✅ Corporate Rewards Dropdown (Fixed) -->
@@ -35,8 +35,8 @@
             Corporate Rewards
           </a>
           <ul class="dropdown-menu" [class.show]="isDropdownOpen">
-            <li><a class="dropdown-item" href="#">Employee Rewards</a></li>
-            <li><a class="dropdown-item" href="#">Customer Rewards</a></li>
+            <li><a class="dropdown-item" routerLink="corporate-rewards/employee-rewards">Employee Rewards</a></li>
+            <li><a class="dropdown-item" routerLink="corporate-rewards/customer-rewards">Customer Rewards</a></li>
           </ul>
         </li>
         
@@ -45,24 +45,25 @@
 
         <!-- ✅ Why One4All? (No Dropdown) -->
         <li class="nav-item">
-          <a class="nav-link" href="#">Why One4All?</a>
+          <a class="nav-link" routerLink="why-one4All">Why One4All?</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" routerLink="/how-can-we-help">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">FAQs</a>
+          <a class="nav-link" routerLink="/category/218-corporate-orders">FAQs</a>
         </li>
       </ul>
 
       <div class="nav-buttons">
-        <a href="#" class="btn btn-danger">Buy Physical Gift Cards</a>
-        <a href="#" class="btn btn-danger">Buy Digital Gift Cards</a>
+        <a routerLink="physical-giftcard" class="btn btn-danger">Buy Physical Gift Cards</a>
+        <a routerLink="digital-rewards-for-business" class="btn btn-danger">Buy Digital Gift Cards</a>
       </div>
 
       <a href="#" class="cart-icon">
         <i class="fas fa-shopping-cart"></i>
+        <span>{{amount}}</span>
       </a>
     </div>
   </div>

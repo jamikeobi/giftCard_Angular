@@ -1,0 +1,516 @@
+<div class="container mt-5 mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Image Slider -->
+    <div class="col-md-6">
+      <div id="giftCardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let img of images; let i = index"
+            [class.active]="i === 0"
+          >
+            <img
+              [src]="img"
+              class="d-block w-100 giftcard-img"
+              alt="Gift Card"
+            />
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            *ngFor="let img of images; let i = index"
+            type="button"
+            [attr.data-bs-target]="'#giftCardCarousel'"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Gift Card Form -->
+    <div class="col-md-6">
+      <div class="giftcard-form">
+        <h3 class="text-center" style="font-weight: lighter">
+          Buy a One4all Gift Card
+        </h3>
+        <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
+          <!-- Amount & Quantity Row -->
+          <div class="row g-3">
+            <div class="col-6">
+              <label class="form-label">Card Amount (€10 - €120)</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="amount"
+                min="10"
+                max="120"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('amount')?.invalid &&
+                  giftCardForm.get('amount')?.touched
+                "
+                class="text-danger"
+              >
+                Amount must be between €10 and €120.
+              </div>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Quantity</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="quantity"
+                min="1"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('quantity')?.invalid &&
+                  giftCardForm.get('quantity')?.touched
+                "
+                class="text-danger"
+              >
+                Please enter a valid quantity.
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex gap-2 mt-3">
+            <button
+              type="submit"
+              class="btn btn-primary w-50"
+              [disabled]="giftCardForm.invalid"
+            >
+              Add to Cart
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-50"
+              data-bs-toggle="modal"
+              data-bs-target="#messageModal"
+            >
+              Add Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Message -->
+  <div class="container">
+    <div
+      class="modal fade"
+      id="messageModal"
+      tabindex="-1"
+      aria-labelledby="messageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="messageModalLabel">Add a Message</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="giftCardForm" (ngSubmit)="saveMessage()">
+              <div class="mb-3">
+                <label class="form-label">To</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="to"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('to')?.invalid &&
+                    giftCardForm.get('to')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Recipient name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">From</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="from"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('from')?.invalid &&
+                    giftCardForm.get('from')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Sender name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  rows="3"
+                  required
+                ></textarea>
+                <div
+                  *ngIf="
+                    giftCardForm.get('message')?.invalid &&
+                    giftCardForm.get('message')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Please enter a message.
+                </div>
+              </div>
+              <!-- <button type="submit" class="btn btn-success w-100" [disabled]="giftCardForm.get('to')?.invalid || giftCardForm.get('from')?.invalid || giftCardForm.get('message')?.invalid">
+                Save Message
+              </button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hidden Close Button to Close Modal -->
+  <div class="container">
+    <button
+      id="closeModalBtn"
+      type="button"
+      class="d-none"
+      data-bs-dismiss="modal"
+    ></button>
+  </div>
+</div>
+
+<!-- Gift Staff Section -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Gift Your Staff Up To £50 Tax-Free</h2>
+
+  <div class="row">
+    <!-- Left Column: Information Section -->
+    <div class="col-md-6">
+      <h3 style="font-weight: bolder !important">
+        Why choose One4all Rewards?
+      </h3>
+      <p>
+        <span style="font-weight: bolder">The gift of choice</span> <br />
+        With over 180 brands to choose from nationwide, including Argos, M&S,
+        Boots, IKEA, TK Maxx and many more, the One4all Gift Card is a perfect
+        treat for your staff.
+      </p>
+      <p>
+        <span style="font-weight: bolder">Secure & Trusted</span> <br />
+
+        As an E-Money issuer, we take security seriously. All One4all Gift Card
+        funds are held in a segregated client fund account and are PCI-DSS
+        compliant, meaning your data and money is always fully secure.
+      </p>
+      <p>
+        <span style="font-weight: bolder">Trusted Rewards Partner</span> <br />
+
+        One4all are an ISO approved business, ensuring that we lead the way in
+        providing a quality, reliable service to our customers. 99% of our
+        corporate clients would recommend us, because we can be trusted to
+        deliver rewards and benefits schemes on time and on budget.*
+      </p>
+      <p>
+        <span style="font-weight: bolder">Tax-Free up to £50 </span> <br />
+
+        Businesses can now reward their staff up to £50 each in One4all Gift
+        Cards completely Tax-Free. Gift your staff with One4all Gift Cards and
+        save up to 32.5% with zero national insurance or tax... Find out more
+        below.
+      </p>
+    </div>
+
+    <!-- Right Column: Request Callback Form -->
+    <div class="col-md-6">
+      <h3 style="font-weight: bolder !important">Request a Callback</h3>
+      <p>
+        Fill in your details and we'll get in touch to provide more information
+        about the Trivial Benefits scheme or help you place your order.
+      </p>
+
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="mt-3">
+        <!-- Name -->
+        <div class="mb-3">
+          <label class="form-label">Name *</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            placeholder="Enter your name"
+          />
+          <div
+            *ngIf="
+              contactForm.get('name')?.touched &&
+              contactForm.get('name')?.invalid
+            "
+            class="text-danger"
+          >
+            Name is required.
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="mb-3">
+          <label class="form-label">Company *</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="company"
+            placeholder="Enter company name"
+          />
+          <div
+            *ngIf="
+              contactForm.get('company')?.touched &&
+              contactForm.get('company')?.invalid
+            "
+            class="text-danger"
+          >
+            Company name is required.
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email Address *</label>
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Enter your email"
+          />
+          <div
+            *ngIf="
+              contactForm.get('email')?.touched &&
+              contactForm.get('email')?.invalid
+            "
+            class="text-danger"
+          >
+            Enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <label class="form-label">Phone Number *</label>
+          <input
+            type="tel"
+            class="form-control"
+            formControlName="phone"
+            placeholder="Enter your phone number"
+          />
+          <div
+            *ngIf="
+              contactForm.get('phone')?.touched &&
+              contactForm.get('phone')?.invalid
+            "
+            class="text-danger"
+          >
+            Enter a valid phone number (10-15 digits).
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <p>
+            Tick the box below to sign up to the One4all Rewards newsletter for
+            information and advice on employee incentives
+          </p>
+        </div>
+
+        <!-- Newsletter Checkbox -->
+        <div class="mb-3 form-check">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            formControlName="newsletter"
+            id="newsletterCheck"
+          />
+          <label class="form-check-label" for="newsletterCheck">Sign up</label>
+        </div>
+
+        <div class="mb-3">
+          <p>
+            This site is protected by reCAPTCHA Enterprise and the Google
+            Privacy Policy and Terms of Service apply.
+          </p>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="contactForm.invalid"
+          style="width: 100px !important"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- New Section: Gift Your Staff Tax-Free -->
+  <div class="row mt-5 align-items-center">
+    <h2 class="text-center mb-4">
+      Gift Your Staff Tax-Free with Trivial Benefits
+    </h2>
+
+    <!-- Left Column: Image -->
+    <div class="col-md-6 text-center">
+      <img
+        src="../../../../assets/images/gift_6.jpg"
+        alt="Gift Card"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+
+    <!-- Right Column: Text Content -->
+    <div class="col-md-6">
+      <h3>How it works</h3>
+      <p>
+        HMRC's Trivial Benefit allowance means that businesses can gift their
+        employees up to £50 tax-free, providing they meet the criteria below:
+      </p>
+      <ul>
+        <li>
+          The benefit must not exceed £50 per employee (including any VAT).
+        </li>
+        <li>The benefit must not be cash or a cash voucher.</li>
+        <li>
+          The benefit must not be given as part of an employee's contractual or
+          salary agreement (this includes regularity which can be assumed as a
+          work perk).
+        </li>
+        <li>
+          The benefit must not be given as a reward for work or performance.
+          Instead, these are perks to boost morale and surprise delight.
+        </li>
+      </ul>
+      <p>
+        Choose hassle-free employee gifting by delivering a gift in the form of
+        a One4all Multi-Store Gift Card, instead of a payment through the
+        employee's salary.
+      </p>
+      <p>
+        What's more, One4all Gift Cards can be spent with over 180 retailers
+        nationwide and online, on everything from food to fashion, homeware to
+        holidays, giving your staff the flexibility to choose a gift they'll
+        truly value.
+      </p>
+      <p>
+        Taking advantage of the Trivial Benefit tax-free allowance couldn't be
+        easier. Simply choose a card and complete the checkout process, and your
+        order will be dispatched, free of charge, via Special/First Class post
+        directly to your business.
+      </p>
+      <p>
+        Alternatively, give us a call on <strong>0207 608 2008</strong> and
+        we'll be happy to help.
+      </p>
+    </div>
+
+    <!-- Simplify Customer Rewards Start -->
+    <section class="container rewards-section2">
+      <div class="row rewards-container2">
+        <div class="col">
+          <div class="reward-box2">
+            <i class="fas fa-pound-sign reward-icon2"></i>
+            <h3>The value of the gift must be £50 or less</h3>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="reward-box2">
+            <i class="fas fa-money-bill-wave reward-icon2"></i>
+            <h3>The gift cannot be given in cash or through payroll</h3>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="reward-box2">
+            <i class="fas fa-trophy reward-icon2"></i>
+            <h3>The gift cannot be a reward for performance</h3>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="reward-box2">
+            <i class="fas fa-file-contract reward-icon2"></i>
+            <h3>The gift cannot be part of the employee’s contract</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Simplify Customer Rewards End -->
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <!-- Left Column: Information Section -->
+    <div class="col-md-6">
+      <h3 style="font-weight: bolder !important">Gift ideas for your staff</h3>
+      <p>
+        With over 180 brands to choose from nationwide, including Argos, M&S,
+        Boots, IKEA, TK Maxx and many more, the One4all Gift Card is a perfect
+        treat for your staff.
+      </p>
+      <p>
+        <span style="font-weight: bolder">Argos</span> <br />
+
+        With thousands of products and hundreds of stores nationwide, your staff
+        will have a wide range of choice to spend their gift card in-store and
+        online with Argos.
+      </p>
+      <p>
+        <span style="font-weight: bolder">Marks & Spencer</span> <br />
+
+        Classic styles, delicious food and much more - M&S offers your employees
+        a taste of luxury when they spend their gift card. Accepted in-store and
+        online.
+      </p>
+      <p>
+        <span style="font-weight: bolder">Currys </span> <br />
+
+        The very best technology, including must-have computers, gadgets,
+        televisions and sound systems, all in one place. Your staff can take
+        their pick with One4all, accepted in-store.
+      </p>
+
+      <p>
+        <span style="font-weight: bolder"> John Lewis </span> <br />
+
+        There's something for everyone at John Lewis - from homeware to beauty,
+        fashion to electricals. Your employees will be spoilt for choice with
+        their One4all Gift Card, accepted in-store and online.
+      </p>
+    </div>
+
+    <!-- Right Column: Request Callback Form -->
+    <div class="col-md-6">
+      <img
+        src="../../../../assets/images/gift_5.jpg"
+        alt="Gift Card"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+  </div>
+</div>
+
+<app-digital-options></app-digital-options>

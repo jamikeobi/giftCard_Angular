@@ -1,0 +1,22 @@
+<div class="sidebar">
+    <!-- Toggle Button (Visible on small screens) -->
+    <button class="btn btn-primary sidebar-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-expanded="false" aria-controls="sidebarMenu" onclick="toggleSidebar()" style="background-color: rgb(239, 237, 237); border: none; color: black;">
+      <span>Select a Category</span>
+      <i id="toggleIcon" class="fas fa-chevron-down"></i>
+    </button>
+  
+    <!-- Sidebar Menu (Collapsible on small screens) -->
+    <div class="collapse d-md-block" id="sidebarMenu">
+      <h2 class="sidebar-title">Select a Category</h2>
+      <ul class="list-group">
+        <li class="list-group-item"><a (click)="selectCategory('all')">All</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('research-report')">Research & Report</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('staff-rewards')">Staff Rewards</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('customer-incentives')">Customer Incentives</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('health-workplace')">Health in the Workplace</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('sme')">SME</a></li>
+        <li class="list-group-item"><a (click)="selectCategory('bik-bonuses')">BIK & Bonuses</a></li>
+      </ul>
+    </div>
+  </div>
+  

@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+  border-top: none !important;
+  background-color: white;
+  /* box-shadow: 0 -4px 8px rgb(56, 55, 55); */
 }
 
 .card-container {
@@ -60,4 +63,75 @@
 
 .card-button:hover {
   background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (768px - 1023px) */
+@media screen and (max-width: 1024px) {
+  .digital-options {
+    padding: 30px 15px;
+  }
+  
+  .card {
+    width: 250px; /* Reduce card size */
+    height: 160px;
+  }
+  
+  .card-button {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+}
+
+/* Mobile Devices (480px - 767px) */
+@media screen and (max-width: 768px) {
+  .digital-options {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px;
+  }
+
+  .card {
+    width: 90%; /* Make cards take up most of the screen */
+    max-width: 280px; /* Prevent oversized cards */
+    height: auto;
+    flex-direction: column;
+  }
+
+  .image-container {
+    height: 150px; /* Adjust image height */
+  }
+
+  .card-button {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Small Screens (320px - 479px) */
+@media screen and (max-width: 480px) {
+  .digital-options {
+    padding: 15px 8px;
+  }
+
+  .card {
+    width: 100%; /* Full width on small screens */
+    max-width: 260px;
+  }
+
+  .image-container {
+    height: 140px;
+  }
+
+  .card-button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }

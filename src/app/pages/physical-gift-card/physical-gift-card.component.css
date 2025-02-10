@@ -1,0 +1,79 @@
+/* Ensures images are the same size */
+
+
+.giftcard-img {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Styling for carousel indicators */
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(69, 66, 66);
+  }
+  
+  .carousel-indicators .active {
+    background-color: #E60000 !important;
+  }
+  
+  /* Gift Card Form Styling */
+  .giftcard-form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .giftcard-form h3 {
+    color: #080808;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal Styling */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #E60000 !important;
+    color: white;
+
+  }
+  button{
+    border: none;
+  }
+label, h2,h3,h4{
+    font-weight: lighter;
+}
+
+.btn-outline-secondary{
+    background-color: transparent !important;
+    color: black;
+}
+
+  .container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+
+  .how-to-buy {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .how-to-buy h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }

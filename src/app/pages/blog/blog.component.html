@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row">
+      <!--  Title -->
+      <app-blog-title></app-blog-title>
+
+      <div class="col-md-3 col-12">
+        <!-- Sidebar -->
+        <app-blog-sidebar (selectedCategory)="filterCategory($event)"></app-blog-sidebar>
+      </div>
+  
+      <!-- Main Content Section -->
+      <div class="col-md-9 col-12">
+        <!-- Blog Main Section -->
+        <app-blog-main-section #mainSection></app-blog-main-section>
+      </div>
+
+      <!-- Digital Options section -->
+        <app-digital-options></app-digital-options>
+
+    </div>
+  </div>
+  

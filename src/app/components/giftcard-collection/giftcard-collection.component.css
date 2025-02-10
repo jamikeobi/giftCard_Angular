@@ -1,0 +1,41 @@
+.gift-card-img {
+  margin: 10px;
+  width: 100%; /* Ensures responsiveness */
+  max-width: 180px; /* Default size for larger screens */
+  height: 180px;
+  object-fit: cover; /* Prevents distortion */
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablets and smaller desktops (1024px and below) */
+@media (max-width: 1024px) {
+  .gift-card-img {
+    max-width: 160px;
+    height: 160px;
+  }
+}
+
+/* Medium screens (768px and below) */
+@media (max-width: 768px) {
+  .gift-card-img {
+    max-width: 140px;
+    height: 140px;
+  }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+  .gift-card-img {
+    max-width: 120px;
+    height: 120px;
+  }
+}
+
+/* Extra small screens (320px and below) */
+@media (max-width: 320px) {
+  .gift-card-img {
+    max-width: 100px;
+    height: 100px;
+  }
+}

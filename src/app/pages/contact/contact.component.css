@@ -1,0 +1,48 @@
+/* Default styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.img-fluid img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Medium screens (tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  .img-fluid img {
+    width: 100%;
+  }
+}
+
+/* Small screens (mobile, 480px and below) */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  .img-fluid img {
+    width: 100%;
+  }
+}
+
+/* Extra small screens (320px and below) */
+@media screen and (max-width: 320px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .img-fluid img {
+    width: 100%;
+  }
+}

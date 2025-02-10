@@ -1,0 +1,95 @@
+/* Ensure the container is centered and not sticking to the edges */
+.container {
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  /* Styling for the left content box */
+  .content-left {
+    /* background-color: #f8f9fa; Light background for contrast */
+    border-radius: 10px; /* Smooth rounded corners */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); Soft shadow effect */
+    padding: 30px;
+    margin: 20px 0;
+  }
+  
+  .content-left h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .content-left p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #E60000 !important;
+    color: white;
+
+  }
+  /* Floating Image Styling */
+  .floating-img {
+    max-width: 80%; /* Ensures the image is not too large */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  /* Responsive Design */
+  
+  /* For tablets (768px - 1023px) */
+  @media (max-width: 1023px) {
+    .container {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .content-left {
+      padding: 20px;
+    }
+  
+    .content-left h3 {
+      font-size: 1.5rem;
+    }
+  
+    .content-left p {
+      font-size: 0.95rem;
+    }
+  
+    .content-left button {
+      font-size: 1rem;
+      padding: 10px 25px;
+    }
+  
+    .floating-img {
+      max-width: 90%;
+    }
+  }
+  
+  /* For mobile screens (below 768px) */
+  @media (max-width: 767px) {
+    .row {
+      flex-direction: column; /* Stack content vertically */
+      text-align: center;
+    }
+  
+    .content-left {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .floating-img {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

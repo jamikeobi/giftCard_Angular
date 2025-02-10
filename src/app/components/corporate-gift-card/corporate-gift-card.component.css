@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    gap: 20px;
+    padding: 20px;
+  }
+
+
+/* Button Styling */
+button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  h6{
+    font-weight: lighter;
+  }

@@ -1,0 +1,382 @@
+<div class="container mt-5 mb-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Image Slider -->
+    <div class="col-md-6">
+      <div id="giftCardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let img of images; let i = index"
+            [class.active]="i === 0"
+          >
+            <img
+              [src]="img"
+              class="d-block w-100 giftcard-img"
+              alt="Gift Card"
+            />
+          </div>
+        </div>
+        <div class="carousel-indicators">
+          <button
+            *ngFor="let img of images; let i = index"
+            type="button"
+            [attr.data-bs-target]="'#giftCardCarousel'"
+            [attr.data-bs-slide-to]="i"
+            [class.active]="i === 0"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Gift Card Form -->
+    <div class="col-md-6">
+      <div class="giftcard-form">
+        <h3 class="text-center" style="font-weight: lighter">
+          Buy a One4all Gift Card
+        </h3>
+        <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
+          <!-- Amount & Quantity Row -->
+          <div class="row g-3">
+            <div class="col-6">
+              <label class="form-label">Card Amount (€10 - €120)</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="amount"
+                min="120"
+                max="5000"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('amount')?.invalid &&
+                  giftCardForm.get('amount')?.touched
+                "
+                class="text-danger"
+              >
+                Amount must be between €120 and €5000.
+              </div>
+            </div>
+            <div class="col-6">
+              <label class="form-label">Quantity</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="quantity"
+                min="1"
+                required
+              />
+              <div
+                *ngIf="
+                  giftCardForm.get('quantity')?.invalid &&
+                  giftCardForm.get('quantity')?.touched
+                "
+                class="text-danger"
+              >
+                Please enter a valid quantity.
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="d-flex gap-2 mt-3">
+            <button
+              type="submit"
+              class="btn btn-primary w-50"
+              [disabled]="giftCardForm.invalid"
+            >
+              Add to Cart
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary w-50"
+              data-bs-toggle="modal"
+              data-bs-target="#messageModal"
+            >
+              Add Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Adding Message -->
+  <div class="container">
+    <div
+      class="modal fade"
+      id="messageModal"
+      tabindex="-1"
+      aria-labelledby="messageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="messageModalLabel">Add a Message</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="giftCardForm" (ngSubmit)="saveMessage()">
+              <div class="mb-3">
+                <label class="form-label">To</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="to"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('to')?.invalid &&
+                    giftCardForm.get('to')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Recipient name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">From</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="from"
+                  required
+                />
+                <div
+                  *ngIf="
+                    giftCardForm.get('from')?.invalid &&
+                    giftCardForm.get('from')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Sender name is required.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  formControlName="message"
+                  rows="3"
+                  required
+                ></textarea>
+                <div
+                  *ngIf="
+                    giftCardForm.get('message')?.invalid &&
+                    giftCardForm.get('message')?.touched
+                  "
+                  class="text-danger"
+                >
+                  Please enter a message.
+                </div>
+              </div>
+              <!-- <button type="submit" class="btn btn-success w-100" [disabled]="giftCardForm.get('to')?.invalid || giftCardForm.get('from')?.invalid || giftCardForm.get('message')?.invalid">
+                    Save Message
+                  </button> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Hidden Close Button to Close Modal -->
+  <div class="container">
+    <button
+      id="closeModalBtn"
+      type="button"
+      class="d-none"
+      data-bs-dismiss="modal"
+    ></button>
+  </div>
+
+  <div class="container" style="max-width: 1100px">
+    <p class="mt-4 text-center text-muted">
+      The One4all Gift Card is issued by GVS Prepaid Limited and is authorised
+      by the Financial Conduct Authority under the Electronic Money Regulations
+      2011 (register reference 900230) for the issuing of electronic money.
+    </p>
+
+    <p class="mt-4 text-center text-muted">
+      Please note: Orders over £12,000 will require KYC which can delay the
+      processing of your order
+    </p>
+  </div>
+
+</div>
+
+
+<app-collection2></app-collection2>
+
+<app-have-bigger-budget></app-have-bigger-budget>
+
+<app-corporate-gift-card></app-corporate-gift-card>
+
+<!-- Reward Section Starts -->
+<div class="container how-to-buy">
+  <h2 style="margin: auto">Reasons to choose One4all corporate gift cards</h2>
+  <!-- <p>
+      With One4all there's no need to guess your employee preferences or give
+      generic gifts for employees as they can choose meaningful rewards for
+      themselves from a choice of 180+ brands!
+    </p> -->
+  <div>
+    <section class="rewards-section">
+      <div class="rewards-container">
+        <div class="reward-box">
+          <img
+            src="../../../assets/images/gift_1.jpg"
+            alt="Quick & easy to distribute"
+          />
+          <h3>Customized gift cards equals meaningful gifts</h3>
+          <p>
+            Connecting with your employees and customers couldn't be easier.
+            With One4all Gift Cards, you can add a personal message to each gift
+            card so your recipient enjoys a warm glow inside that will
+            strengthen their continuous brand loyalty.
+          </p>
+        </div>
+
+        <div class="reward-box">
+          <img
+            src="../../../assets/images/gift_3.jpg"
+            alt="Leave a lasting impression"
+          />
+          <h3>The perfect gift of choice</h3>
+          <p>
+            Want to remain the top choice for your customers and staff? Then
+            offer them a choice of rewards. One4all Gift Cards can be redeemed
+            at a wide range of 180+ retail brands nationwide, including
+            ever-popular stores such as Primark, M&S, H&M, IKEA, Argos, John
+            Lewis and Boots.
+          </p>
+        </div>
+
+        <div class="reward-box">
+          <img
+            src="../../../assets/images/gift_3.jpg"
+            alt="Big rewards. Big smiles"
+          />
+          <h3>We're here to support you</h3>
+          <p>
+            Ordering physical cards in bulk with One4all is a breeze. Either
+            order them independently on this page or reach out to our dedicated
+            team for support with your corporate gift card purchases. Plus, your
+            funds are safeguarded and we offer 7-day customer support for your
+            gift card recipients.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<!-- Reward Section Ends -->
+
+<!-- Filter Section -->
+<section class="container my-4 filter">
+  <div class="btn-group d-flex">
+    <button
+      class="btn btn-outline-primary flex-fill"
+      [class.active]="activeTab === 'whyOne4All'"
+      (click)="activeTab = 'whyOne4All'"
+    >
+      Why One4all
+    </button>
+
+    <button
+      class="btn btn-outline-primary flex-fill"
+      [class.active]="activeTab === 'productDescription'"
+      (click)="activeTab = 'productDescription'"
+    >
+      Product Description
+    </button>
+
+    <button
+      class="btn btn-outline-primary flex-fill"
+      [class.active]="activeTab === 'deliveryOptions'"
+      (click)="activeTab = 'deliveryOptions'"
+    >
+      Delivery Options
+    </button>
+  </div>
+
+  <!-- Paragraphs -->
+  <div class="content-box mt-4">
+    <p *ngIf="activeTab === 'whyOne4All'">
+      At One4all, we believe that the perfect gift is unique to each and every
+      individual. That’s why, whether you’re into fashion, technology, books,
+      beauty, games, or anything else, the One4all Gift Card has got you covered
+      for every occasion.
+    </p>
+    <p *ngIf="activeTab === 'whyOne4All'">
+      Accepted with over 170 High Street brands, including Argos, Marks &
+      Spencer, Nando's, Primark, IKEA, and many, many more, the One4all Gift
+      Card is the perfect gift for friends, family, and loved ones.
+    </p>
+    <p *ngIf="activeTab === 'whyOne4All'">
+      The One4all Gift Card is issued by GVS Prepaid Limited. GVS Prepaid
+      Limited is authorised by the Financial Conduct Authority under the
+      Electronic Money Regulations 2011 (register reference 900230) for the
+      issuing of electronic money.
+    </p>
+
+    <p *ngIf="activeTab === 'productDescription'">
+      A colourful and vibrant way to say Happy Birthday, this Gift Card will be
+      a real treat for the lucky recipient.
+    </p>
+
+    <p *ngIf="activeTab === 'productDescription'">
+      One4all Gift cards are regulated products.
+    </p>
+
+    <p *ngIf="activeTab === 'productDescription'">
+      There is a 5 year maximum life on plastic cards but One4all cards do not
+      expire. After 18 months we apply a nominal operational and processing
+      charge of £0.90 per month, until card balances reaches zero. If there are
+      funds remaining on the card after the plastic expiry date, we will replace
+      the card.
+    </p>
+    <p *ngIf="activeTab === 'productDescription'">
+      All One4all Gift Card funds are securely held and protected by
+      'safeguarding'. <a href="/safeguarding-message">Click here</a> to find out more about how funds are
+      safeguarded.​
+    </p>
+    <p *ngIf="activeTab === 'productDescription'">
+      For full Terms and Conditions please <a href="/terms">Click here</a>
+    </p>
+    <p *ngIf="activeTab === 'productDescription'">
+      The One4all and One4all Favourites Gift Card is issued by GVS Prepaid
+      Limited*. GVS Prepaid Limited is a company incorporated in England and
+      Wales under company number 09193070, having its registered office at
+      Westside, London Road, Hemel Hempstead, Hertfordshire, HP3 9TD and is
+      authorised by the Financial Conduct Authority under the Electronic Money
+      Regulations 2011 (register reference 900230) for the issuing of electronic
+      money and the provision of payment services. GVS Prepaid Limited is part
+      of the Blackhawk Network Group.*Excluding the Restaurant Favourites Gift
+      Card which is managed by GVS Prepaid Limited.
+    </p>
+
+    <p *ngIf="activeTab === 'deliveryOptions'">
+      All orders subject to credit card clearance. Orders received before 11am
+      on a working day will be dispatched either same day or the next working
+      day. Orders placed at a weekend or bank holiday will be processed the next
+      working day.
+    </p>
+    <p *ngIf="activeTab === 'deliveryOptions'">
+      Standard Delivery times are dependent on carriers, however, normally would
+      be within 1 – 3 working days from dispatch.
+    </p>
+    <p *ngIf="activeTab === 'deliveryOptions'">
+      Tracked Delivery times are dependent on carriers, however, normally would
+      be within 1 -2 working days from dispatch.
+    </p>
+  </div>
+</section>
+
+<app-digital-options></app-digital-options>

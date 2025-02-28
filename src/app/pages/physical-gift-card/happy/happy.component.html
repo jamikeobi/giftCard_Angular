@@ -32,13 +32,13 @@
     <div class="col-md-6">
       <div class="giftcard-form">
         <h3 class="text-center" style="font-weight: lighter">
-          Buy a One4all Gift Card
+          Buy a Naija Gift Card
         </h3>
         <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
           <!-- Amount & Quantity Row -->
           <div class="row g-3">
             <div class="col-6">
-              <label class="form-label">Card Amount (€10 - €120)</label>
+              <label class="form-label">Card Amount (₦10 - ₦120)</label>
               <input
                 type="number"
                 class="form-control"
@@ -54,7 +54,7 @@
                 "
                 class="text-danger"
               >
-                Amount must be between €120 and €5000.
+                Amount must be between ₦120 and ₦5000.
               </div>
             </div>
             <div class="col-6">
@@ -198,13 +198,13 @@
 
   <div class="container" style="max-width: 1100px">
     <p class="mt-4 text-center text-muted">
-      The One4all Gift Card is issued by GVS Prepaid Limited and is authorised
+      The Naija Gift Card is issued by GVS Prepaid Limited and is authorized
       by the Financial Conduct Authority under the Electronic Money Regulations
       2011 (register reference 900230) for the issuing of electronic money.
     </p>
 
     <p class="mt-4 text-center text-muted">
-      Please note: Orders over £12,000 will require KYC which can delay the
+      Please note: Orders over ₦12,000 will require KYC which can delay the
       processing of your order
     </p>
   </div>
@@ -220,7 +220,7 @@
 
 <!-- Reward Section Starts -->
 <div class="container how-to-buy">
-  <h2 style="margin: auto">Reasons to choose One4all corporate gift cards</h2>
+  <h2 style="margin: auto">Reasons to choose <span class="span">Naija Digital gift cards</span></h2>
   <!-- <p>
       With One4all there's no need to guess your employee preferences or give
       generic gifts for employees as they can choose meaningful rewards for
@@ -231,13 +231,13 @@
       <div class="rewards-container">
         <div class="reward-box">
           <img
-            src="../../../assets/images/gift_1.jpg"
-            alt="Quick & easy to distribute"
+            src="../../../../assets/images/customized_giftcards.jpg" style="width: 200px; height: 220px;"
+            alt="Customized gift cards equals meaningful gifts"
           />
-          <h3>Customized gift cards equals meaningful gifts</h3>
+          <h3 style="color: #002D47 !important; height: 50px;">Customized gift cards equals meaningful gifts</h3>
           <p>
             Connecting with your employees and customers couldn't be easier.
-            With One4all Gift Cards, you can add a personal message to each gift
+            With Naija Gift Cards, you can add a personal message to each gift
             card so your recipient enjoys a warm glow inside that will
             strengthen their continuous brand loyalty.
           </p>
@@ -245,13 +245,13 @@
 
         <div class="reward-box">
           <img
-            src="../../../assets/images/gift_3.jpg"
-            alt="Leave a lasting impression"
+            src="../../../../assets/images/gift_of_choice.jpg" style="width: 200px; height: 250px;"
+            alt="The perfect gift of choice"
           />
-          <h3>The perfect gift of choice</h3>
+          <h3 style="color: #002D47 !important; height: 50px;">The perfect gift of choice</h3>
           <p>
             Want to remain the top choice for your customers and staff? Then
-            offer them a choice of rewards. One4all Gift Cards can be redeemed
+            offer them a choice of rewards. Naija Gift Cards can be redeemed
             at a wide range of 180+ retail brands nationwide, including
             ever-popular stores such as Primark, M&S, H&M, IKEA, Argos, John
             Lewis and Boots.
@@ -260,12 +260,12 @@
 
         <div class="reward-box">
           <img
-            src="../../../assets/images/gift_3.jpg"
-            alt="Big rewards. Big smiles"
+            src="../../../../assets/images/support.jpg" style="width: 200px; height: 250px;"
+            alt="We're here to support you"
           />
-          <h3>We're here to support you</h3>
+          <h3 style="color: #002D47 !important; height: 50px;">We're here to support you</h3>
           <p>
-            Ordering physical cards in bulk with One4all is a breeze. Either
+            Ordering physical cards in bulk with Naija is a breeze. Either
             order them independently on this page or reach out to our dedicated
             team for support with your corporate gift card purchases. Plus, your
             funds are safeguarded and we offer 7-day customer support for your
@@ -283,10 +283,10 @@
   <div class="btn-group d-flex">
     <button
       class="btn btn-outline-primary flex-fill"
-      [class.active]="activeTab === 'whyOne4All'"
-      (click)="activeTab = 'whyOne4All'"
+      [class.active]="activeTab === 'whyNaijaGiftCard'"
+      (click)="activeTab = 'whyNaijaGiftCard'"
     >
-      Why One4all
+      Why Naija Gift Card
     </button>
 
     <button
@@ -308,75 +308,66 @@
 
   <!-- Paragraphs -->
   <div class="content-box mt-4">
-    <p *ngIf="activeTab === 'whyOne4All'">
-      At One4all, we believe that the perfect gift is unique to each and every
-      individual. That’s why, whether you’re into fashion, technology, books,
-      beauty, games, or anything else, the One4all Gift Card has got you covered
-      for every occasion.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      At Naija Gift Card, we believe that the perfect gift is unique to each
+      individual. Whether you're gifting for birthdays, celebrations, or any
+      occasion, our Naija Digital Gift Card offers a variety of options to suit
+      every interest, including fashion, technology, entertainment, and more.
     </p>
-    <p *ngIf="activeTab === 'whyOne4All'">
-      Accepted with over 170 High Street brands, including Argos, Marks &
-      Spencer, Nando's, Primark, IKEA, and many, many more, the One4all Gift
-      Card is the perfect gift for friends, family, and loved ones.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      Accepted at a wide range of Nigerian retailers and online platforms, the
+      Naija Digital Gift Card is an ideal choice for friends, family, and loved
+      ones.
     </p>
-    <p *ngIf="activeTab === 'whyOne4All'">
-      The One4all Gift Card is issued by GVS Prepaid Limited. GVS Prepaid
-      Limited is authorised by the Financial Conduct Authority under the
-      Electronic Money Regulations 2011 (register reference 900230) for the
-      issuing of electronic money.
-    </p>
-
-    <p *ngIf="activeTab === 'productDescription'">
-      A colourful and vibrant way to say Happy Birthday, this Gift Card will be
-      a real treat for the lucky recipient.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      The Naija Digital Gift Card is issued by GVS Prepaid Limited. GVS Prepaid
+      Limited is authorised by the Central Bank of Nigeria (CBN) to issue electronic
+      money and provide payment services.
     </p>
 
     <p *ngIf="activeTab === 'productDescription'">
-      One4all Gift cards are regulated products.
+      A colorful and thoughtful way to show appreciation, this Naija Gift Card
+      will make the recipient's day special.
     </p>
 
     <p *ngIf="activeTab === 'productDescription'">
-      There is a 5 year maximum life on plastic cards but One4all cards do not
-      expire. After 18 months we apply a nominal operational and processing
-      charge of £0.90 per month, until card balances reaches zero. If there are
-      funds remaining on the card after the plastic expiry date, we will replace
-      the card.
+      Naija Gift Cards are regulated products.
+    </p>
+
+    <p *ngIf="activeTab === 'productDescription'">
+      There is a 5-year maximum life for the digital cards. After 18 months, we apply a
+      nominal fee of ₦90 per month until the balance reaches zero. If there are
+      funds remaining after the card expiration, we will replace it at no extra
+      cost.
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      All One4all Gift Card funds are securely held and protected by
-      'safeguarding'. <a href="/safeguarding-message">Click here</a> to find out more about how funds are
-      safeguarded.​
+      All Naija Gift Card funds are securely protected by 'safeguarding'. <a href="/safeguarding-message">Click here</a> to learn more about how we protect your funds.​
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      For full Terms and Conditions please <a href="/terms">Click here</a>
+      For full Terms and Conditions, please <a href="/terms">Click here</a>
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      The One4all and One4all Favourites Gift Card is issued by GVS Prepaid
-      Limited*. GVS Prepaid Limited is a company incorporated in England and
-      Wales under company number 09193070, having its registered office at
-      Westside, London Road, Hemel Hempstead, Hertfordshire, HP3 9TD and is
-      authorised by the Financial Conduct Authority under the Electronic Money
-      Regulations 2011 (register reference 900230) for the issuing of electronic
-      money and the provision of payment services. GVS Prepaid Limited is part
-      of the Blackhawk Network Group.*Excluding the Restaurant Favourites Gift
-      Card which is managed by GVS Prepaid Limited.
+      The Naija Digital Gift Card is issued by GVS Prepaid Limited*. GVS Prepaid
+      Limited is a registered company in Nigeria and authorised by the Central
+      Bank of Nigeria to issue electronic money and provide payment services.
     </p>
 
     <p *ngIf="activeTab === 'deliveryOptions'">
-      All orders subject to credit card clearance. Orders received before 11am
-      on a working day will be dispatched either same day or the next working
-      day. Orders placed at a weekend or bank holiday will be processed the next
-      working day.
+      All orders are subject to credit card clearance. Orders received before
+      11am on a business day will be processed and dispatched either the same
+      day or the next working day. Orders placed on weekends or public holidays
+      will be processed the next business day.
     </p>
     <p *ngIf="activeTab === 'deliveryOptions'">
-      Standard Delivery times are dependent on carriers, however, normally would
-      be within 1 – 3 working days from dispatch.
+      Standard delivery typically takes between 1–3 business days from dispatch,
+      depending on the carrier.
     </p>
     <p *ngIf="activeTab === 'deliveryOptions'">
-      Tracked Delivery times are dependent on carriers, however, normally would
-      be within 1 -2 working days from dispatch.
+      Tracked delivery usually takes between 1-2 business days from dispatch,
+      depending on the carrier.
     </p>
   </div>
 </section>
+
 
 <app-digital-options></app-digital-options>

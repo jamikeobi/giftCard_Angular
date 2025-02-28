@@ -89,13 +89,14 @@
   .reward-box img {
     width: 100%; /* Image now fits inside the card */
     max-width: 250px; /* Adjust image size */
-    height: auto;
+    height: 200px;
     object-fit: contain;
     margin-bottom: 15px;
   }
   
   .reward-box h3 {
     font-size: 22px;
+    height: 50px;
     color: black;
     font-weight: bolder !important;
     margin-bottom: 10px;

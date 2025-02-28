@@ -1,0 +1,28 @@
+.card img {
+    max-width: 100px;
+  }
+  
+  i{
+    color: white !important;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+  }
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .display-4 {
+    font-size: 3rem;
+  }
+  
+  .text-success {
+    color: #28a745;
+  }
+  

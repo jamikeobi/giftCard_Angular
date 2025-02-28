@@ -39,12 +39,12 @@
 }
 
 .faq-list a:hover {
-    background: #E60000;
+    background: #002D47;
     color: #fff;
 }
 
 .faq-list i {
-    color: black;
+    color: #0063F5 !important;
     margin-right: 12px;
     font-size: 18px;
 }

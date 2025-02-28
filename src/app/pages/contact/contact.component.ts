@@ -7,35 +7,36 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  contactForm: FormGroup;
+  orderForm: FormGroup;
+  countries: string[] = ['United Kingdom', 'United States', 'Canada', 'Australia', 'Germany', 'France'];
+  submitted = false;
 
   constructor(private fb: FormBuilder) {
-    this.contactForm = this.fb.group({
-      cardType: ['', Validators.required],
-      queryType: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(20)]],
-      fullName: ['', Validators.required],
-      postcode: [''],
-      orderNumber: [''],
-      cardId: [''],
-      email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern(/^\d{10,15}$/)]],
-      images: [null]
+    this.orderForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      companyName: ['', Validators.required],
+      jobTitle: ['', Validators.required],
+      businessEmail: ['', [Validators.required, Validators.email]],
+      phoneNumber: ['', Validators.required],
+      country: ['', Validators.required],
+      helpMessage: ['', Validators.required],
+      subscribe: [false]
     });
   }
 
-  onFileChange(event: any) {
-    if (event.target.files.length > 0) {
-      this.contactForm.patchValue({ images: event.target.files });
-    }
-  }
+  onSubmit() {
+    if (this.orderForm.valid) {
+      this.submitted = true;
+      console.log('Form Data:', this.orderForm.value);
 
-  submitForm() {
-    if (this.contactForm.valid) {
-      console.log('Form Submitted:', this.contactForm.value);
-      alert('Form submitted successfully!');
+      setTimeout(() => {
+        this.submitted = false;
+      }, 3000);
+      // alert('Form submitted successfully!');
+      this.orderForm.reset();
     } else {
-      this.contactForm.markAllAsTouched();
+      console.log('Please fill in all required fields.');
     }
   }
 }

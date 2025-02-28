@@ -15,7 +15,7 @@
 
 /* 🔹 Slider Wrapper */
 .slider-wrapper {
-  width: 80%;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -25,6 +25,10 @@
   display: flex;
   transition: transform 0.5s ease-in-out;
   gap: 15px;
+}
+
+.slider img{
+  width: 200px !important;
 }
 
 /* 🔹 Images */
@@ -44,18 +48,18 @@
 
 /* 🔹 Navigation Buttons */
 .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 50%;
-  transition: 0.3s ease;
-  z-index: 1000; /* Fixed buttons being covered */
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+  font-size: 20px !important;
+  border-radius: 50% !important;
+  transition: 0.3s ease !important;
+  z-index: 1000 !important; /* Fixed buttons being covered */
 }
 
 /* 🔹 Button Hover Effect */

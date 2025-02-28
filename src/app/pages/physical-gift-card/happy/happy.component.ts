@@ -9,15 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class HappyComponent {
   giftCardForm: FormGroup;
 
-  activeTab: string = 'whyOne4All'; // Default active tab
+  activeTab: string = 'whyNaijaGiftCard'; // Default active tab
 
 
   images = [
-    '../../../../assets/images/giftcard/giftcard4.jpg',
-    '../../../assets/images/giftcard/giftcard2.jpg',
-    '../../../../assets/images/gift_card.jpg',
-    '../../../assets/images/giftcard/giftcard3.jpg',
-    '../../../assets/images/giftcard/giftcard5.jpg'
+    '../../../assets/images/physical_giftcard/birthday.jpg',
+    '../../../assets/images/physical_giftcard/taxfree.jpg',
+    '../../../assets/images/physical_giftcard/chipPin.jpg',
+    '../../../assets/images/physical_giftcard/perfectCouple.jpg',
+    '../../../assets/images/physical_giftcard/blackcard.jpg'
   ];
   constructor(private fb: FormBuilder) {
     this.giftCardForm = this.fb.group({

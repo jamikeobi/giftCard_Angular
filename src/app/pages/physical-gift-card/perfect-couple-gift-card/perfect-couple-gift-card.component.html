@@ -32,13 +32,13 @@
     <div class="col-md-6">
       <div class="giftcard-form">
         <h3 class="text-center" style="font-weight: lighter">
-          Buy a One4all Gift Card
+          Buy a Naija Gift Card
         </h3>
         <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
           <!-- Amount & Quantity Row -->
           <div class="row g-3">
             <div class="col-6">
-              <label class="form-label">Card Amount (€10 - €120)</label>
+              <label class="form-label">Card Amount (₦10 - ₦120)</label>
               <input
                 type="number"
                 class="form-control"
@@ -54,7 +54,7 @@
                 "
                 class="text-danger"
               >
-                Amount must be between €120 and €5000.
+                Amount must be between ₦120 and ₦5000.
               </div>
             </div>
             <div class="col-6">
@@ -202,10 +202,10 @@
   <div class="btn-group d-flex">
     <button
       class="btn btn-outline-primary flex-fill"
-      [class.active]="activeTab === 'whyOne4All'"
-      (click)="activeTab = 'whyOne4All'"
+      [class.active]="activeTab === 'whyNaijaGiftCard'"
+      (click)="activeTab = 'whyNaijaGiftCard'"
     >
-      Why One4all
+      Why Naija Gift Card
     </button>
 
     <button
@@ -227,78 +227,70 @@
 
   <!-- Paragraphs -->
   <div class="content-box mt-4">
-    <p *ngIf="activeTab === 'whyOne4All'">
-      At One4all, we believe that the perfect gift is unique to each and every
-      individual. That’s why, whether you’re into fashion, technology, books,
-      beauty, games, or anything else, the One4all Gift Card has got you covered
-      for every occasion.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      At Naija Digital, we believe that the perfect gift is one that fits the
+      unique style of every individual. Whether it's for fashion lovers, tech
+      enthusiasts, or anyone in between, the Naija Digital Gift Card is a great
+      way to show you care on any occasion.
     </p>
-    <p *ngIf="activeTab === 'whyOne4All'">
-      Accepted with over 170 High Street brands, including Argos, Marks &
-      Spencer, Nando's, Primark, IKEA, and many, many more, the One4all Gift
-      Card is the perfect gift for friends, family, and loved ones.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      Accepted by numerous top brands in Nigeria and across various online stores,
+      the Naija Digital Gift Card is a fantastic gift for your friends, family, or
+      loved ones.
     </p>
-    <p *ngIf="activeTab === 'whyOne4All'">
-      The One4all Gift Card is issued by GVS Prepaid Limited. GVS Prepaid
-      Limited is authorised by the Financial Conduct Authority under the
-      Electronic Money Regulations 2011 (register reference 900230) for the
-      issuing of electronic money.
-    </p>
-
-    <p *ngIf="activeTab === 'productDescription'">
-      A colourful and vibrant way to say Happy Birthday, this Gift Card will be
-      a real treat for the lucky recipient.
+    <p *ngIf="activeTab === 'whyNaijaGiftCard'">
+      The Naija Digital Gift Card is issued by Naija Digital Services. Naija Digital
+      Services is authorised by the Nigerian Financial Services Authority to issue
+      electronic gift cards and money equivalents.
     </p>
 
     <p *ngIf="activeTab === 'productDescription'">
-      Accepted in over 170 retailers including Pizza Express, IKEA, Argos, M&S,
-      John Lewis, and B&Q, as well as many other outlets nationwide and online.
+      A lively and vibrant way to wish someone a Happy Birthday, the Naija Digital
+      Gift Card is sure to be a delightful gift for the lucky recipient.
     </p>
 
     <p *ngIf="activeTab === 'productDescription'">
-      One4all Gift cards are regulated products.
+      Accepted in a wide variety of retailers, including top Nigerian stores, online
+      platforms, and more, the Naija Digital Gift Card is perfect for anyone and everyone.
+    </p>
+
+    <p *ngIf="activeTab === 'productDescription'">
+      Naija Digital Gift Cards are regulated and safeguarded.
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      There is a 5 year maximum life on plastic cards but One4all cards do not
-      expire. After 18 months we apply a nominal operational and processing
-      charge of £0.90 per month, until card balances reaches zero. If there are
-      funds remaining on the card after the plastic expiry date, we will replace
-      the card.
+      The cards have a maximum life of 5 years, but do not expire. After 18 months, a
+      small operational fee of ₦500 will be charged monthly until the balance reaches zero.
+      If funds remain after expiry, we will replace the card.
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      All One4all Gift Card funds are securely held and protected by
-      'safeguarding'. <a href="/safeguarding-message">Click here</a> to find out more about how funds are
-      safeguarded.​
+      All Naija Digital Gift Card funds are securely held and protected under safeguarding.
+      <a href="/safeguarding-message">Click here</a> to find out more about how funds are
+      safeguarded.
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      For full Terms and Conditions please <a href="/terms">Click here</a>
+      For full Terms and Conditions, please <a href="/terms">Click here</a>
     </p>
     <p *ngIf="activeTab === 'productDescription'">
-      The One4all and One4all Favourites Gift Card is issued by GVS Prepaid
-      Limited*. GVS Prepaid Limited is a company incorporated in England and
-      Wales under company number 09193070, having its registered office at
-      Westside, London Road, Hemel Hempstead, Hertfordshire, HP3 9TD and is
-      authorised by the Financial Conduct Authority under the Electronic Money
-      Regulations 2011 (register reference 900230) for the issuing of electronic
-      money and the provision of payment services. GVS Prepaid Limited is part
-      of the Blackhawk Network Group.*Excluding the Restaurant Favourites Gift
-      Card which is managed by GVS Prepaid Limited.
+      The Naija Digital Gift Card is issued by Naija Digital Services*. Naija Digital
+      Services is authorised by the Nigerian Financial Services Authority to issue
+      electronic gift cards and provide digital payment solutions.
     </p>
     <p *ngIf="activeTab === 'deliveryOptions'">
-      All orders subject to credit card clearance. Orders received before 11am
-      on a working day will be dispatched either same day or the next working
-      day. Orders placed at a weekend or bank holiday will be processed the next
-      working day.
+      All orders are subject to payment clearance. Orders placed before 11am on a
+      working day will be processed and dispatched either the same day or the next
+      working day. Orders placed during weekends or public holidays will be processed
+      the next working day.
     </p>
     <p *ngIf="activeTab === 'deliveryOptions'">
-      Standard Delivery times are dependent on carriers, however, normally would
-      be within 1 – 3 working days from dispatch.
+      Standard delivery usually takes 1 – 3 working days from dispatch, depending on
+      the delivery carrier.
     </p>
     <p *ngIf="activeTab === 'deliveryOptions'">
-      Tracked Delivery times are dependent on carriers, however, normally would
-      be within 1 -2 working days from dispatch.
+      Tracked delivery typically takes 1 – 2 working days from dispatch, depending on
+      the carrier used.
     </p>
   </div>
 </section>
+
 
 <app-digital-options></app-digital-options>

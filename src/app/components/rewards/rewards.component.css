@@ -1,7 +1,7 @@
 .rewards-section {
   text-align: center;
   padding: 50px 20px;
-  /* background-color: #fff; */
+  background-color: #002D47;
 }
 
 .rewards-container {
@@ -29,7 +29,7 @@
 .reward-box img {
   width: 100%; /* Image now fits inside the card */
   max-width: 250px; /* Adjust image size */
-  height: auto;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 15px;
 }

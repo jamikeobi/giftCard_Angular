@@ -14,7 +14,7 @@
 
 /* Button Styling */
 button {
-  background-color: #E60000;
+  /* background-color: #E60000; */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -42,6 +42,10 @@ button a{
   width: 80%;
   height: 500px;
   object-fit: cover; /* Ensures image maintains aspect ratio */
+}
+h2, h3, h4, h5{
+  font-weight: bold !important;
+  color: #002D47 !important;
 }
 
 /* Medium screens (1024px - 992px) */

@@ -7,6 +7,48 @@ html{
   scroll-behavior: smooth;
 }
 
+i{
+  color: #0063F5 !important;
+}
+p{
+  color: #819DAD !important;
+}
+.head{
+  color: #819DAD !important;
+}
+
+.span{
+  color: #0063F5 !important;
+}
+.strong{
+  color: #002D47   !important;
+}
+button {
+  padding: 10px 20px;
+  background-color: #0063F5 !important;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #002D47 !important;
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
 /* Optional styling for large image card */
 .card-img-top {
     object-fit: cover;
@@ -24,5 +66,6 @@ html{
     cursor: pointer;
   }
   h2, h3, h4, h5{
-    font-weight: lighter !important;
+    font-weight: bold !important;
+    color: #002D47 !important;
   }

@@ -31,17 +31,20 @@
   color: #555;
 }
 
-.support-content .btn {
-  padding: 12px 30px;
-  font-size: 1rem;
-  background-color: #E60000;
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #0063F5 !important;
+  color: white;
   border: none;
-  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 20px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.support-content .btn:hover {
-  background-color: #CC0000;
+.btn-primary:hover {
+  background-color: #002D47 !important;
+  animation: bounce 0.3s ease;
 }
 
 /* Responsive Media Queries */

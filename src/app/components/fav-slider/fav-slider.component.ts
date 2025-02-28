@@ -7,12 +7,12 @@ import { Component, AfterViewInit, ElementRef, ViewChild, HostListener } from '@
 })
 export class FavSliderComponent implements AfterViewInit {
   images = [
-    '../../../assets/images/gift_1.jpg',
-    '../../../assets/images/gift_2.jpg',
-    '../../../assets/images/gift_3.jpg',
-    '../../../assets/images/gift_4.jpg',
-    '../../../assets/images/gift_5.jpg',
-    '../../../assets/images/gift_6.jpg',
+    '../../../assets/images/physical_giftcard/taxfree.jpg',
+    '../../../assets/images/physical_giftcard/blackcard.jpg',
+    '../../../assets/images/physical_giftcard/chipPin.jpg',
+    '../../../assets/images/physical_giftcard/birthday.jpg',
+    '../../../assets/images/physical_giftcard/perfectCouple.jpg',
+    // '../../../assets/images/physical_giftcard/',
     '../../../assets/images/giftcard/giftcard2.jpg',
     '../../../assets/images/gift_8.webp',
     '../../../assets/images/giftcard/giftcard1.jpg',

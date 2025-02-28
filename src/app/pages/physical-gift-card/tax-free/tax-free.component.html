@@ -32,13 +32,13 @@
     <div class="col-md-6">
       <div class="giftcard-form">
         <h3 class="text-center" style="font-weight: lighter">
-          Buy a One4all Gift Card
+          Buy a Naija Gift Card
         </h3>
         <form [formGroup]="giftCardForm" (ngSubmit)="onSubmit()">
           <!-- Amount & Quantity Row -->
           <div class="row g-3">
             <div class="col-6">
-              <label class="form-label">Card Amount (€10 - €120)</label>
+              <label class="form-label">Card Amount (₦10 - ₦120)</label>
               <input
                 type="number"
                 class="form-control"
@@ -54,7 +54,7 @@
                 "
                 class="text-danger"
               >
-                Amount must be between €10 and €120.
+                Amount must be between ₦10 and ₦120.
               </div>
             </div>
             <div class="col-6">
@@ -199,42 +199,29 @@
 
 <!-- Gift Staff Section -->
 <div class="container mt-5">
-  <h2 class="text-center mb-4">Gift Your Staff Up To £50 Tax-Free</h2>
+  <h2 class="text-center mb-4">Gift Your Staff Up To ₦50 Tax-Free</h2>
 
   <div class="row">
     <!-- Left Column: Information Section -->
     <div class="col-md-6">
       <h3 style="font-weight: bolder !important">
-        Why choose One4all Rewards?
+        Why choose Naija Digital Gift Card?
       </h3>
       <p>
         <span style="font-weight: bolder">The gift of choice</span> <br />
-        With over 180 brands to choose from nationwide, including Argos, M&S,
-        Boots, IKEA, TK Maxx and many more, the One4all Gift Card is a perfect
-        treat for your staff.
+        With over 180 brands to choose from nationwide, including popular names like Argos, M&S, Boots, IKEA, TK Maxx, and more, the Naija Digital Gift Card is the perfect gift for your staff.
       </p>
       <p>
         <span style="font-weight: bolder">Secure & Trusted</span> <br />
-
-        As an E-Money issuer, we take security seriously. All One4all Gift Card
-        funds are held in a segregated client fund account and are PCI-DSS
-        compliant, meaning your data and money is always fully secure.
+        As an E-Money issuer, we prioritize security. All Naija Digital Gift Card funds are stored in a segregated client fund account and are fully PCI-DSS compliant, ensuring that your data and money are always safe.
       </p>
       <p>
         <span style="font-weight: bolder">Trusted Rewards Partner</span> <br />
-
-        One4all are an ISO approved business, ensuring that we lead the way in
-        providing a quality, reliable service to our customers. 99% of our
-        corporate clients would recommend us, because we can be trusted to
-        deliver rewards and benefits schemes on time and on budget.*
+        We are an ISO-approved business, committed to providing a reliable and high-quality service to our customers. 99% of our corporate clients recommend us for our ability to deliver rewards and benefits schemes on time and within budget.
       </p>
       <p>
-        <span style="font-weight: bolder">Tax-Free up to £50 </span> <br />
-
-        Businesses can now reward their staff up to £50 each in One4all Gift
-        Cards completely Tax-Free. Gift your staff with One4all Gift Cards and
-        save up to 32.5% with zero national insurance or tax... Find out more
-        below.
+        <span style="font-weight: bolder">Tax-Free up to ₦50</span> <br />
+        Companies can now gift their employees up to ₦50 in Naija Digital Gift Cards completely tax-free. Gift your staff with Naija Digital Gift Cards and save up to 32.5% with no national insurance or taxes. Find out more below.
       </p>
     </div>
 
@@ -242,8 +229,7 @@
     <div class="col-md-6">
       <h3 style="font-weight: bolder !important">Request a Callback</h3>
       <p>
-        Fill in your details and we'll get in touch to provide more information
-        about the Trivial Benefits scheme or help you place your order.
+        Fill in your details, and we'll contact you to provide more information about the Trivial Benefits scheme or assist you in placing your order.
       </p>
 
       <form [formGroup]="contactForm" (ngSubmit)="submitForm()" class="mt-3">
@@ -257,10 +243,7 @@
             placeholder="Enter your name"
           />
           <div
-            *ngIf="
-              contactForm.get('name')?.touched &&
-              contactForm.get('name')?.invalid
-            "
+            *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid"
             class="text-danger"
           >
             Name is required.
@@ -277,10 +260,7 @@
             placeholder="Enter company name"
           />
           <div
-            *ngIf="
-              contactForm.get('company')?.touched &&
-              contactForm.get('company')?.invalid
-            "
+            *ngIf="contactForm.get('company')?.touched && contactForm.get('company')?.invalid"
             class="text-danger"
           >
             Company name is required.
@@ -297,10 +277,7 @@
             placeholder="Enter your email"
           />
           <div
-            *ngIf="
-              contactForm.get('email')?.touched &&
-              contactForm.get('email')?.invalid
-            "
+            *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid"
             class="text-danger"
           >
             Enter a valid email address.
@@ -317,10 +294,7 @@
             placeholder="Enter your phone number"
           />
           <div
-            *ngIf="
-              contactForm.get('phone')?.touched &&
-              contactForm.get('phone')?.invalid
-            "
+            *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid"
             class="text-danger"
           >
             Enter a valid phone number (10-15 digits).
@@ -329,8 +303,7 @@
 
         <div class="mb-3">
           <p>
-            Tick the box below to sign up to the One4all Rewards newsletter for
-            information and advice on employee incentives
+            Tick the box below to sign up for the Naija Digital Gift Card newsletter for information and advice on employee incentives.
           </p>
         </div>
 
@@ -347,8 +320,7 @@
 
         <div class="mb-3">
           <p>
-            This site is protected by reCAPTCHA Enterprise and the Google
-            Privacy Policy and Terms of Service apply.
+            This site is protected by reCAPTCHA Enterprise, and the Google Privacy Policy and Terms of Service apply.
           </p>
         </div>
 
@@ -374,7 +346,7 @@
     <!-- Left Column: Image -->
     <div class="col-md-6 text-center">
       <img
-        src="../../../../assets/images/gift_6.jpg"
+        src="../../../../assets/images/staff_tax_free.jpg"
         alt="Gift Card"
         class="img-fluid rounded shadow"
       />
@@ -384,133 +356,75 @@
     <div class="col-md-6">
       <h3>How it works</h3>
       <p>
-        HMRC's Trivial Benefit allowance means that businesses can gift their
-        employees up to £50 tax-free, providing they meet the criteria below:
+        HMRC's Trivial Benefit allowance means that businesses can gift their employees up to ₦50 tax-free, providing they meet the criteria below:
       </p>
       <ul>
         <li>
-          The benefit must not exceed £50 per employee (including any VAT).
+          The benefit must not exceed ₦50 per employee (including any VAT).
         </li>
         <li>The benefit must not be cash or a cash voucher.</li>
         <li>
-          The benefit must not be given as part of an employee's contractual or
-          salary agreement (this includes regularity which can be assumed as a
-          work perk).
+          The benefit must not be given as part of an employee's contractual or salary agreement (this includes regularity, which can be assumed as a work perk).
         </li>
         <li>
-          The benefit must not be given as a reward for work or performance.
-          Instead, these are perks to boost morale and surprise delight.
+          The benefit must not be given as a reward for work or performance. Instead, these are perks to boost morale and surprise delight.
         </li>
       </ul>
       <p>
-        Choose hassle-free employee gifting by delivering a gift in the form of
-        a One4all Multi-Store Gift Card, instead of a payment through the
-        employee's salary.
+        Choose hassle-free employee gifting by delivering a gift in the form of a Naija Digital Gift Card, instead of a payment through the employee's salary.
       </p>
       <p>
-        What's more, One4all Gift Cards can be spent with over 180 retailers
-        nationwide and online, on everything from food to fashion, homeware to
-        holidays, giving your staff the flexibility to choose a gift they'll
-        truly value.
+        What's more, Naija Digital Gift Cards can be spent with over 180 retailers nationwide and online, on everything from food to fashion, homeware to holidays, giving your staff the flexibility to choose a gift they'll truly value.
       </p>
       <p>
-        Taking advantage of the Trivial Benefit tax-free allowance couldn't be
-        easier. Simply choose a card and complete the checkout process, and your
-        order will be dispatched, free of charge, via Special/First Class post
-        directly to your business.
+        Taking advantage of the Trivial Benefit tax-free allowance couldn't be easier. Simply choose a card and complete the checkout process, and your order will be dispatched, free of charge, via Special/First Class post directly to your business.
       </p>
       <p>
-        Alternatively, give us a call on <strong>0207 608 2008</strong> and
-        we'll be happy to help.
+        Alternatively, give us a call on <strong>0207 608 2008</strong> and we'll be happy to help.
       </p>
     </div>
-
-    <!-- Simplify Customer Rewards Start -->
-    <section class="container rewards-section2">
-      <div class="row rewards-container2">
-        <div class="col">
-          <div class="reward-box2">
-            <i class="fas fa-pound-sign reward-icon2"></i>
-            <h3>The value of the gift must be £50 or less</h3>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="reward-box2">
-            <i class="fas fa-money-bill-wave reward-icon2"></i>
-            <h3>The gift cannot be given in cash or through payroll</h3>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="reward-box2">
-            <i class="fas fa-trophy reward-icon2"></i>
-            <h3>The gift cannot be a reward for performance</h3>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="reward-box2">
-            <i class="fas fa-file-contract reward-icon2"></i>
-            <h3>The gift cannot be part of the employee’s contract</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Simplify Customer Rewards End -->
   </div>
 </div>
 
+<!-- Gift Ideas for Your Staff -->
 <div class="container">
   <div class="row">
     <!-- Left Column: Information Section -->
     <div class="col-md-6">
-      <h3 style="font-weight: bolder !important">Gift ideas for your staff</h3>
+      <h3 style="font-weight: bolder !important">Gift Ideas for Your Staff</h3>
       <p>
-        With over 180 brands to choose from nationwide, including Argos, M&S,
-        Boots, IKEA, TK Maxx and many more, the One4all Gift Card is a perfect
-        treat for your staff.
+        With over 180 brands to choose from nationwide, including Argos, M&S, Boots, IKEA, TK Maxx, and many more, the Naija Digital Gift Card is the perfect treat for your staff.
       </p>
       <p>
         <span style="font-weight: bolder">Argos</span> <br />
-
-        With thousands of products and hundreds of stores nationwide, your staff
-        will have a wide range of choice to spend their gift card in-store and
-        online with Argos.
+        With thousands of products and hundreds of stores nationwide, your staff will have a wide range of choices to spend their gift card in-store and online with Argos.
       </p>
       <p>
         <span style="font-weight: bolder">Marks & Spencer</span> <br />
-
-        Classic styles, delicious food and much more - M&S offers your employees
-        a taste of luxury when they spend their gift card. Accepted in-store and
-        online.
+        Classic styles, delicious food, and much more—M&S offers your employees a taste of luxury when they spend their gift card. Accepted in-store and online.
       </p>
       <p>
-        <span style="font-weight: bolder">Currys </span> <br />
-
-        The very best technology, including must-have computers, gadgets,
-        televisions and sound systems, all in one place. Your staff can take
-        their pick with One4all, accepted in-store.
+        <span style="font-weight: bolder">Currys</span> <br />
+        The very best technology, including must-have computers, gadgets, televisions, and sound systems, all in one place. Your staff can take their pick with Naija Digital Gift Cards, accepted in-store.
       </p>
 
       <p>
-        <span style="font-weight: bolder"> John Lewis </span> <br />
-
-        There's something for everyone at John Lewis - from homeware to beauty,
-        fashion to electricals. Your employees will be spoilt for choice with
-        their One4all Gift Card, accepted in-store and online.
+        <span style="font-weight: bolder">John Lewis</span> <br />
+        There's something for everyone at John Lewis—from homeware to beauty, fashion to electricals. Your employees will be spoilt for choice with their Naija Digital Gift Card, accepted in-store and online.
       </p>
     </div>
 
-    <!-- Right Column: Request Callback Form -->
+    <!-- Right Column: Image -->
     <div class="col-md-6">
       <img
-        src="../../../../assets/images/gift_5.jpg"
+        src="../../../../assets/images/gift_ideas.jpg"
         alt="Gift Card"
         class="img-fluid rounded shadow"
+        style="height: 500px; width: 700px;"
       />
     </div>
   </div>
 </div>
+
 
 <app-digital-options></app-digital-options>

@@ -36,8 +36,9 @@
 }
 
 .option p {
+  /* padding-bottom: 10px; */
   font-size: 16px;
-  color: #555;
+  color: #819DAD;
 }
 
 .option a {
@@ -58,6 +59,9 @@
 button a{
   text-decoration: none;
   color: whitesmoke !important;
+}
+button{
+
 }
 .contact {
   background-color: red;

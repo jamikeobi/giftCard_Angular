@@ -13,6 +13,10 @@
     padding: 30px;
     margin: 20px 0;
   }
+
+  .col-lg-4{
+    width: 400px;
+  }
   
   .content-left h3 {
     font-size: 1.75rem;
@@ -30,9 +34,13 @@
     font-size: 16px;
     font-weight: bold;
     border: none;
-    background-color: #E60000 !important;
+    background-color: #0063F5 !important;
     color: white;
 
+  }
+
+  .btn:hover{
+    background-color: #002D47 !important;
   }
   /* Floating Image Styling */
   .floating-img {

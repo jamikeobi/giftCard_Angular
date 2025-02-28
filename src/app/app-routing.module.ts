@@ -29,6 +29,7 @@ import { ChipPinComponent } from './pages/physical-gift-card/chip-pin/chip-pin.c
 import { HappyComponent } from './pages/physical-gift-card/happy/happy.component';
 import { PerfectCoupleGiftCardComponent } from './pages/physical-gift-card/perfect-couple-gift-card/perfect-couple-gift-card.component';
 import { SafeguardingMessageComponent } from './pages/safeguarding-message/safeguarding-message.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent }, // Default route to Landing Page
@@ -58,7 +59,7 @@ const routes: Routes = [
   { path: 'black-card', component: PhysicalGiftCardComponent },
   { path: 'taxfree', component: TaxFreeComponent },
   { path: 'chip-pin', component: ChipPinComponent },
-  {path: 'happy', component: HappyComponent},
+  {path: 'happy-birthday', component: HappyComponent},
   {path: 'perf-couple-gift-card', component: PerfectCoupleGiftCardComponent},
   {path: 'safeguarding-message', component: SafeguardingMessageComponent},
 
@@ -67,6 +68,7 @@ const routes: Routes = [
   {path: 'corporate-rewards/customer-rewards', component: CustomerRewardsComponent},
   {path: 'why-one4All', component: WhyOne4AllComponent},
   {path: 'category/218-corporate-orders', component: FAQComponent},
+  {path: 'cart', component: CartComponent},
   
   { path: '**', redirectTo: '', pathMatch: 'full' }, // Redirect unknown routes to Landing Page
 ];

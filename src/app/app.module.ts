@@ -41,7 +41,7 @@ import { StaffRewardsComponent } from './pages/blog/staff-rewards/staff-rewards/
 import { CreateAccountComponent } from './pages/account/create-account/create-account.component';
 import { CustomerLoginComponent } from './pages/account/customer-login/customer-login.component';
 import { OgaLoginComponent } from './pages/account/oga-login/oga-login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import { PhysicalGiftCardComponent } from './pages/physical-gift-card/physical-gift-card.component';
 import { FavSliderComponent } from './components/fav-slider/fav-slider.component';
@@ -63,6 +63,7 @@ import { HappyComponent } from './pages/physical-gift-card/happy/happy.component
 import { Collection2Component } from './components/giftcard-collection/collection2/collection2.component';
 import { PerfectCoupleGiftCardComponent } from './pages/physical-gift-card/perfect-couple-gift-card/perfect-couple-gift-card.component';
 import { SafeguardingMessageComponent } from './pages/safeguarding-message/safeguarding-message.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -123,14 +124,16 @@ import { SafeguardingMessageComponent } from './pages/safeguarding-message/safeg
     HappyComponent,
     Collection2Component,
     PerfectCoupleGiftCardComponent,
-    SafeguardingMessageComponent
+    SafeguardingMessageComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

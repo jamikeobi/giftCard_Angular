@@ -9,13 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TaxFreeComponent {
   giftCardForm: FormGroup;
   contactForm: FormGroup;
-
   images = [
-    '../../../../assets/images/gift_card.jpg',
-    '../../../assets/images/giftcard/giftcard2.jpg',
-    '../../../assets/images/giftcard/giftcard3.jpg',
-    '../../../assets/images/giftcard/giftcard4.jpg',
-    '../../../assets/images/giftcard/giftcard5.jpg'
+    '../../../assets/images/physical_giftcard/taxfree.jpg',
+    '../../../assets/images/physical_giftcard/blackcard',
+    '../../../assets/images/physical_giftcard/chipPin.jpg',
+    '../../../assets/images/physical_giftcard/perfectCouple.jpg',
+    '../../../assets/images/physical_giftcard/birthday.jpg'
   ];
   constructor(private fb: FormBuilder) {
     this.giftCardForm = this.fb.group({

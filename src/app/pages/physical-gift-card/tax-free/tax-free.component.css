@@ -48,9 +48,9 @@
     border-radius: 50%;
     background-color: rgb(69, 66, 66);
   }
-  
+    
   .carousel-indicators .active {
-    background-color: #E60000 !important;
+    background-color: #002D47 !important;
   }
   
   /* Gift Card Form Styling */
@@ -78,7 +78,7 @@
     font-size: 16px;
     font-weight: bold;
     border: none;
-    background-color: #E60000 !important;
+    background-color: #0063F5 !important;
     color: white;
 
   }
